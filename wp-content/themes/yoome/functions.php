@@ -958,7 +958,6 @@ function ti_custom_javascript() {
     <?php
 }
 add_action('wp_head', 'ti_custom_javascript');
-
 add_action( 'woocommerce_sale_flash', 'sale_badge_percentage', 25 );
  
 function sale_badge_percentage() {
@@ -985,7 +984,6 @@ function sale_badge_percentage() {
  * Add or modify States
  */
 add_filter( 'woocommerce_states', 'custom_woocommerce_states' );
-
 function custom_woocommerce_states( $states ) {
 
   $states['TN'] = array(
@@ -1018,9 +1016,6 @@ function custom_woocommerce_states( $states ) {
 
   return $states;
 }
-
-
-
 /**
  * Hide shipping rates when free shipping is available.
  * Updated to support WooCommerce 2.6 Shipping Zones.
@@ -1052,7 +1047,6 @@ function my_hide_shipping_when_free_is_available( $rates ) {
 	
 }
 add_filter( 'woocommerce_package_rates', 'my_hide_shipping_when_free_is_available', 100 );
-
 add_filter('manage_edit-shop_order_columns','custom_shop_order',100);
 
 function custom_shop_order($columns){
@@ -1062,12 +1056,10 @@ $order_column[$key] = $column;
 if('order_date' == $key){
 	$order_column['transaction_id'] = __('Tracking Number','woocommerce');
 }
-
 }
 return $order_column;
 
 }
-
 function custom_product_description_content() {
     // Récupérer les liens vers les images depuis une source (remplacez les URL par les vôtres)
     $image_links = array(
@@ -1099,10 +1091,6 @@ echo '<div id="image-caption"></div>';
 }
 
 add_action('woocommerce_single_product_summary', 'custom_product_description_content', 15);
-
-
-
-// Supprimer les tailles d'images non nécessaires
 function remove_additional_image_sizes($sizes) {
     // Supprime les tailles d'images spécifiques
     unset($sizes['medium_large']);
@@ -1132,10 +1120,6 @@ function custom_scriptss() {
     <?php
 }
 add_action('wp_footer', 'custom_scriptss');
-
-
-// add_action( 'woocommerce_view_order', 'my_custom_content_for_view_order' );
-
 function my_custom_content_for_view_order( $order_id ) {
     $url_client = "https://90406010-retail-ondemand.cegid.cloud/Y2/SaleDocumentService.svc?singleWsdl";
     $login = "90406010_001_PROD\\foued";
@@ -1226,7 +1210,6 @@ XML;
         echo "<div class='woocommerce-error'>Error: " . $e->getMessage() . "</div>";
     }
 }
-
 function custom_tab_script() {
     ?>
     <script type="text/javascript">
@@ -1264,10 +1247,7 @@ function custom_tab_script() {
     </script>
     <?php
 }
-
 add_action('wp_footer', 'custom_tab_script');
-
-
 function create_new_customers($customer_id) {
      $lastcut = sprintf("%05d", $customer_id);
      $mycustomer = "W" . $lastcut;
@@ -1284,7 +1264,6 @@ function create_new_customers($customer_id) {
                  "trace" => true
              )
         );
-
       try {
           $requestCC = new StdClass();
          $requestCC->customerData = new StdClass();
@@ -1300,21 +1279,16 @@ function create_new_customers($customer_id) {
         $requestCC->customerData->FirstName = $first_name;
          $requestCC->customerData->IsCompany = false;
          $requestCC->customerData->LastName = $last_name;
-
          $requestCC->customerData->PhoneData = new StdClass();
           $requestCC->customerData->PhoneData->AlternativePhoneNumber = "";
           $requestCC->customerData->PhoneData->CellularPhoneNumber = "";
          $requestCC->customerData->CustomerId = $mycustomer;
-         var_dump("CC", $requestCC);
           $requestCC->clientContext = new StdClass();
           $requestCC->clientContext->DatabaseId = "90406010_001_PROD";
-          var_dump("testcc",$requestCC);
          $resu = $client->AddNewCustomer($requestCC);
-         var_dump("ALA",$resu);
-         die;
          $resultat = json_decode(json_encode($resu), true);
-         if (isset($resultat["AddNewCustomerResult"])) {              $CustomerId = $resultat["AddNewCustomerResult"];
-
+         if (isset($resultat["AddNewCustomerResult"])) {              
+            $CustomerId = $resultat["AddNewCustomerResult"];
           } else {
 
               global $wpdb;
@@ -1330,10 +1304,7 @@ function create_new_customers($customer_id) {
      echo "Erreur AA : " . $e->getMessage();
  }
 }
-
-
 // add_action('woocommerce_created_customer', 'create_new_customers',10,1);
-
 function custom_disable_add_to_cart_button() {
     ?>
     <script type="text/javascript">
@@ -1354,5 +1325,4 @@ function custom_disable_add_to_cart_button() {
     <?php
 }
 add_action('wp_footer', 'custom_disable_add_to_cart_button');
-
 ?>
