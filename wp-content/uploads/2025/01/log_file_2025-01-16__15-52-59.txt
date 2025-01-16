@@ -1,0 +1,102 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/wordpress
+Data file = C:\xampp\htdocs\wordpress/wp-content/uploads/2025/01/demo-content-import-file_2025-01-16__15-52-59.xml
+Widget file = C:\xampp\htdocs\wordpress/wp-content/uploads/2025/01/demo-widgets-import-file_2025-01-16__15-52-59.json
+Customizer file = not defined!
+Redux files:
+yoome_theme_options -> C:\xampp\htdocs\wordpress/wp-content/uploads/2025/01/demo-redux-import-file_0-2025-01-16__15-52-59.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+[WARNING] Failed to import "Subscription Form": Invalid post type mc4wp-form
+
+
+---ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Blog Sidebar : 
+
+Catégories - Categories - Imported
+Archives - Archives - Imported
+TS - Recent Comments - Recent Comments - Imported
+TS - Blogs - Recent Posts - Imported
+Nuage d’étiquettes - Tags - Imported
+
+Blog Detail Sidebar : 
+
+Catégories - Categories - Imported
+Archives - Archives - Imported
+Nuage d’étiquettes - Tags - Imported
+
+Product Category Sidebar : 
+
+Product Search - No Title - Imported
+Filter Products by Price - Price - Imported
+Filter Products by Attribute - Size - Imported
+Product Tag Cloud - Tags - Imported
+
+Top Filter Widget Area : 
+
+TS - Product Filter By Brand - Brands - Imported
+Filter Products by Price - Price - Imported
+Filter Products by Attribute - Color - Imported
+Filter Products by Attribute - Size - Imported
+
+Product Detail Sidebar : 
+
+Product Search - No Title - Imported
+Nuage d’étiquettes - Tags - Imported
+
+Supermarket vertical menu : 
+
+TS - Menu - All categories - Imported
+
+TS Mega Menu Widget Area 1 : 
+
+Menu de navigation - No Title - Imported
+Menu de navigation - No Title - Imported
+
+TS Mega Menu Widget Area 2 : 
+
+Menu de navigation - SHOP LAYOUTS - Imported
+Menu de navigation - PRODUCT TYLES - Imported
+Menu de navigation - PRODUCT LAYOUTS - Imported
+Menu de navigation - FEATURE SHOP - Imported
+
+TS Mega Menu Widget Area 3 : 
+
+Menu de navigation - SHOP LAYOUTS - Imported
+Menu de navigation - INFORMATION - Imported
+
+TS Mega Menu Widget Area 4 : 
+
+Menu de navigation - SHORTCODE BLOG - Imported
+Menu de navigation - SHORTCODE BLOG - Imported
+
+TS Mega Menu Widget Area 5 : 
+
+Menu de navigation - HOMEPAGES - Imported
+Menu de navigation - HOMEPAGES - Imported
+
+TS Mega Menu Widget Area 6 : 
+
+Menu de navigation - No Title - Imported
+Menu de navigation - No Title - Imported
+
+
+
+---Importing Redux settings---
+Redux settings import for: yoome_theme_options finished successfully!
+
+---ocdi/after_import---
+
